@@ -145,7 +145,7 @@ export default async function handler(
              <tr>
                 <td><p>10.</p></td>
                 <td><p>Message</p></td>
-                <td><p>${message}</p></td>
+                <td><p>${message ?? "no messages"}</p></td>
             </tr>
         </table>
     </div>
