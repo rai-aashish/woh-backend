@@ -9,11 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/cors": "^2.8.12",
+    "axios": "^0.27.2",
+    "cors": "^2.8.5",
+    "mailgun-js": "^0.22.0",
     "next": "12.2.2",
+    "next-absolute-url": "^1.2.2",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@types/mailgun-js": "^0.22.12",
     "@types/node": "18.0.5",
     "@types/react": "18.0.15",
     "@types/react-dom": "18.0.6",
