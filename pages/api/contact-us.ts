@@ -1,15 +1,14 @@
 import mailgun from "mailgun-js";
 import { NextApiRequest, NextApiResponse } from "next";
-import absoluteUrl from "next-absolute-url";
 import { FormData } from "TYPES/FormData";
-import { useCors } from "middlewares/useCors";
+import { appUseCors } from "middlewares/appUseCors";
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
   // ? run middleware
-  await useCors(req, res);
+  await appUseCors(req, res);
 
   //? Grabbing the the origin of the request method
   //? const { origin } = absoluteUrl(req);

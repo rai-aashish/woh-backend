@@ -8,8 +8,8 @@ const cors = Cors({
   origin: origin,
 });
 
-async function useCors(req: NextApiRequest, res: NextApiResponse) {
+async function appUseCors(req: NextApiRequest, res: NextApiResponse) {
   return await runMiddleware(req, res, cors);
 }
 
-export { useCors };
+export { appUseCors };

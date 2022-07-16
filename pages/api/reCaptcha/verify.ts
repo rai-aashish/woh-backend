@@ -1,12 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import axios from "axios";
-import { useCors } from "middlewares/useCors";
+import { appUseCors } from "middlewares/appUseCors";
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  await useCors(req, res);
+  await appUseCors(req, res);
 
   if (req.method !== "POST")
     return res.status(404).json({ message: "This method is not found" });
