@@ -165,8 +165,8 @@ export default async function handler(
         .send(
           {
             from: "Interested Person <jhon@mg.yourdomain.com>", // sender address
-            to: `toupeshupreti@gmail.com`, //email address of the receiver
-            subject: "WoH Service Registration", // Subject line
+            to: `${process.env.MAILGUN_RECEIVER_EMAIL}`, //email address of the receiver
+            subject: "WoH Service Contact", // Subject line
             html: emailText, // html body
           },
           (error, body) => {
