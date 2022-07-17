@@ -51,56 +51,62 @@ tr:nth-child(even) {
 <h2 class="new-message">New client contact !</h2>
 <table>
             <tr>
-                <th><p>#</p></td>
-                <th><p>Items</p></td>
-                <th><p>Details</p></td>
+                <th>#</td>
+                <th>Items</td>
+                <th>Details</td>
             </tr>
             <tr>
-                <td><p>1.</p></td>
-                <td><p>Name of the requester</p></td>
-                <td><p>${emailData.name}</p></td>
+                <td>1.</td>
+                <td>Name of the requester</td>
+                <td>${emailData.name}</td>
             </tr>
             <tr>
-                <td><p>2.</p></td>
-                <td><p>For whome is this request for?</p></td>
-                <td><p>${emailData._for}</p></td>
+                <td>2.</td>
+                <td>For whome is this request for?</td>
+                <td>${emailData._for}</td>
             </tr>
             <tr>
-                <td><p>3.</p></td>
-                <td><p>Services</p></td>
-                <td><ol>${emailData.services.map(
+                <td>3.></td>
+                <td>Services</td>
+                <td>
+                <ol>${emailData.services.map(
                   (service) => "<li>" + service + "</li>"
-                )}</ol></td>
+                )}</ol>
+                </td>
             </tr>
             <tr>
-                <td><p>4.</p></td>
-                <td><p>Phone Number</p></td>
-                <td><p>${emailData.phoneNumber}</p></td>
+                <td>4.</td>
+                <td>Phone Number</td>
+                <td>${emailData.phoneNumber}</td>
             </tr>
             <tr>
-                <td><p>5.</p></td>
-                <td><p>Email address</p></td>
-                <td><p>${emailData.email}</p></td>
+                <td>5.</td>
+                <td>Email address</td>
+                <td>${emailData.email}</td>
             </tr>
             <tr>
-                <td><p>6.</p></td>
-                <td><p>Street</p></td>
-                <td><p>${emailData.street}</p></td>
+                <td>6.</td>
+                <td>Street</td>
+                <td>${emailData.street}</td>
             </tr>
             <tr>
-                <td><p>7.</p></td>
-                <td><p>Suburb</p></td>
-                <td><p>${emailData.suburb}</p></td>
+                <td>7.</td>
+                <td>Suburb</td>
+                <td>${emailData.suburb}</td>
             </tr>
             <tr>
-                <td><p>8.</p></td>
-                <td><p>Postcode</p></td>
-                <td><p>${emailData.postCode}</p></td>
+                <td>8.</td>
+                <td>Postcode</td>
+                <td>${emailData.postCode}</td>
             </tr>
              <tr>
-                <td><p>10.</p></td>
-                <td><p>Message</p></td>
-                <td><p>${emailData.message ?? "-- no message --"}</p></td>
+                <td>10.</td>
+                <td>Message</td>
+                <td>${
+                  emailData.message !== "" || !emailData.message
+                    ? "-- no message --"
+                    : emailData.message
+                }</td>
             </tr>
         </table>
 </body>
